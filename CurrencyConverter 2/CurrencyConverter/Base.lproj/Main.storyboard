@@ -260,7 +260,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="lTV-ca-6jt"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otj-kG-ELM" userLabel="viewLabel">
@@ -425,7 +425,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="1EI-xk-MuT"/>
                     <connections>
-                        <outlet property="fromBoten" destination="MeO-fH-P38" id="thb-Un-0df"/>
+                        <outlet property="fromButton" destination="MeO-fH-P38" id="ppY-hJ-gW4"/>
                         <outlet property="styleTextField" destination="k1Q-ao-ryz" id="Dyl-Ml-jGJ"/>
                         <outlet property="toButton" destination="Svt-yr-2Ca" id="FmK-L6-jEN"/>
                         <outlet property="viewLabel" destination="Otj-kG-ELM" id="FIh-H5-Jm8"/>
