@@ -425,7 +425,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="1EI-xk-MuT"/>
                     <connections>
+                        <outlet property="fromBoten" destination="MeO-fH-P38" id="thb-Un-0df"/>
                         <outlet property="styleTextField" destination="k1Q-ao-ryz" id="Dyl-Ml-jGJ"/>
+                        <outlet property="toButton" destination="Svt-yr-2Ca" id="FmK-L6-jEN"/>
                         <outlet property="viewLabel" destination="Otj-kG-ELM" id="FIh-H5-Jm8"/>
                     </connections>
                 </viewController>
