@@ -7,11 +7,16 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class settingsViewController: UIViewController {
     
+    @IBOutlet weak var firstNameData: UITextField!
     
     
+    @IBOutlet weak var lastNameData: UITextField!
+    
+    @IBOutlet weak var emailData: UITextField!
     
     @IBAction func exset(_ sender: Any) {
         do {
@@ -40,6 +45,30 @@ class settingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let db = Firestore.firestore()
+        
+        if let user = Auth.auth().currentUser {
+            let id = user.uid
+            db.collection("users").document(id).getDocument(completion: { (result,error) in
+                
+                if error != nil {
+                    print("~~ Error: \(error?.localizedDescription)")
+                }
+                else {
+                    if let data = result?.data() {
+                        self.firstNameData.text = data["firstname"] as! String
+                        self.lastNameData.text = data["lastname"] as! String
+
+                    }
+                }
+            })
+//            print("~~ \()")
+            emailData.text = user.email
+        }
+       
+    }
 
     /*
     // MARK: - Navigation
