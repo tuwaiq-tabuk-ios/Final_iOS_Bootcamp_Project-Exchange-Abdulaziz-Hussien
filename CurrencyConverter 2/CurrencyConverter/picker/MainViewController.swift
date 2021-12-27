@@ -6,8 +6,24 @@
 //
 
 import UIKit
-
-class MainViewController: UIViewController {
+import Foundation
+class MainViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    
+    var arrayLabel = ["65","656","234"]
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrayLabel.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as! CollectionViewCell
+        cell.label.text = arrayLabel[indexPath.row]
+        return cell
+            }
+    
+    
+    @IBOutlet weak var collection: UICollectionView!
+    
     
     @IBOutlet weak var styleTextField: UITextField!
     
@@ -31,13 +47,21 @@ class MainViewController: UIViewController {
     
     var selectType:String!
     
+    let numberFormatter: NumberFormatter = {
+      let nf = NumberFormatter()
+      nf.numberStyle = .decimal
+      nf.minimumFractionDigits = 0
+      nf.maximumFractionDigits = 2
+      return nf
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        Utilities.styleAcshnButton(fromButton)
-        Utilities.styleAcshnButton(toButton)
+//        Utilities.styleAcshnButton(fromButton)
+//        Utilities.styleAcshnButton(toButton)
         Utilities.styleTextField(styleTextField)
-        Utilities.stylewidthButton(calculate)
-        Utilities.stylewidthButton(record)
+//        Utilities.stylewidthButton(calculate)
+//        Utilities.stylewidthButton(record)
         // Do any additional setup after loading the view.
     }
     
@@ -111,16 +135,16 @@ class MainViewController: UIViewController {
                 let result = newValue["\(from)_\(to)"]
                 
                 if amount.isInt == true {
-                    let BigResult = "\((result as? Double)! * Double(amount)!)"
+                    let BigResult = (result as? Double)! * Double(amount)!
                     DispatchQueue.main.async {
-                        viewLabel.text = "= \(BigResult)"
+                        viewLabel.text = numberFormatter.string(from: NSNumber(value: BigResult))
                     }
                     
                 }
                 else {
                     let elseResult = (result as? Double)! * 1
                     DispatchQueue.main.async {
-                        viewLabel.text = "= \(elseResult)"
+                        viewLabel.text = numberFormatter.string(from: NSNumber(value: elseResult))
                     }
                     
                 }

@@ -17,6 +17,7 @@
 		28BBE23E2771B5090074C07C /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE23D2771B5090074C07C /* settingsViewController.swift */; };
 		28BBE2412771C14E0074C07C /* loogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE2402771C14E0074C07C /* loogViewController.swift */; };
 		28BBE2432771E8AE0074C07C /* RcordeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE2422771E8AE0074C07C /* RcordeViewController.swift */; };
+		28BDAE492779A74000133929 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDAE482779A74000133929 /* CollectionViewCell.swift */; };
 		28C43AE727673485003F1694 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C43AE627673485003F1694 /* LoginViewController.swift */; };
 		28C43AE9276734AF003F1694 /* singUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C43AE8276734AF003F1694 /* singUpViewController.swift */; };
 		28C43AEB276734C4003F1694 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C43AEA276734C4003F1694 /* HomeViewController.swift */; };
@@ -39,6 +40,7 @@
 		28BBE23D2771B5090074C07C /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		28BBE2402771C14E0074C07C /* loogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loogViewController.swift; sourceTree = "<group>"; };
 		28BBE2422771E8AE0074C07C /* RcordeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RcordeViewController.swift; sourceTree = "<group>"; };
+		28BDAE482779A74000133929 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		28C43AE627673485003F1694 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		28C43AE8276734AF003F1694 /* singUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singUpViewController.swift; sourceTree = "<group>"; };
 		28C43AEA276734C4003F1694 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		2882BC5A2766307B00147E9E /* CurrencyConverter */ = {
 			isa = PBXGroup;
 			children = (
+				28BDAE4C2779A76600133929 /* cell */,
 				28B6476E276A035200AE9508 /* picker */,
 				2882BC5B2766307B00147E9E /* AppDelegate.swift */,
 				2882BC5D2766307B00147E9E /* SceneDelegate.swift */,
@@ -125,6 +128,14 @@
 				28BBE2402771C14E0074C07C /* loogViewController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		28BDAE4C2779A76600133929 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				28BDAE482779A74000133929 /* CollectionViewCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		28C43AF627677248003F1694 /* Helpers */ = {
@@ -276,6 +287,7 @@
 				28BBE23E2771B5090074C07C /* settingsViewController.swift in Sources */,
 				2882BC5E2766307B00147E9E /* SceneDelegate.swift in Sources */,
 				28BBE2432771E8AE0074C07C /* RcordeViewController.swift in Sources */,
+				28BDAE492779A74000133929 /* CollectionViewCell.swift in Sources */,
 				28BBE2412771C14E0074C07C /* loogViewController.swift in Sources */,
 				28B64770276A040300AE9508 /* MainViewController.swift in Sources */,
 				28C43AEB276734C4003F1694 /* HomeViewController.swift in Sources */,

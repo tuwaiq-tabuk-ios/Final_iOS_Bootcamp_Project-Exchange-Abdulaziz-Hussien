@@ -52,7 +52,7 @@ class settingsViewController: UIViewController {
         if let user = Auth.auth().currentUser {
             let id = user.uid
             db.collection("users").document(id).getDocument(completion: { (result,error) in
-                
+                //حفظ بينات الدخول
                 if error != nil {
                     print("~~ Error: \(error?.localizedDescription)")
                 }

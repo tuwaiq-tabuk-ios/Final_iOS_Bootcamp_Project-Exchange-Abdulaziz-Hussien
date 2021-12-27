@@ -95,7 +95,7 @@ class singUpViewController: UIViewController {
                 }
                 else {
                     
-                    // User was created successfully, now store the first name and last name
+                 //تخزين الاسم الاول وثني   // User was created successfully, now store the first name and last name
                     let db = Firestore.firestore()
                     
                     db.collection("users").document(result!.user.uid).setData(["firstname":firstName, "lastname":lastName, "uid": result!.user.uid ]) { (error) in
