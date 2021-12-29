@@ -18,6 +18,7 @@
 		28BBE2412771C14E0074C07C /* loogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE2402771C14E0074C07C /* loogViewController.swift */; };
 		28BBE2432771E8AE0074C07C /* RcordeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE2422771E8AE0074C07C /* RcordeViewController.swift */; };
 		28BDAE492779A74000133929 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDAE482779A74000133929 /* CollectionViewCell.swift */; };
+		28BDAE58277AF28D00133929 /* ForgteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDAE57277AF28D00133929 /* ForgteViewController.swift */; };
 		28C43AE727673485003F1694 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C43AE627673485003F1694 /* LoginViewController.swift */; };
 		28C43AE9276734AF003F1694 /* singUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C43AE8276734AF003F1694 /* singUpViewController.swift */; };
 		28C43AEB276734C4003F1694 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C43AEA276734C4003F1694 /* HomeViewController.swift */; };
@@ -41,6 +42,7 @@
 		28BBE2402771C14E0074C07C /* loogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loogViewController.swift; sourceTree = "<group>"; };
 		28BBE2422771E8AE0074C07C /* RcordeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RcordeViewController.swift; sourceTree = "<group>"; };
 		28BDAE482779A74000133929 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		28BDAE57277AF28D00133929 /* ForgteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgteViewController.swift; sourceTree = "<group>"; };
 		28C43AE627673485003F1694 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		28C43AE8276734AF003F1694 /* singUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singUpViewController.swift; sourceTree = "<group>"; };
 		28C43AEA276734C4003F1694 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				28C43AE627673485003F1694 /* LoginViewController.swift */,
 				28C43AEA276734C4003F1694 /* HomeViewController.swift */,
 				28BBE2422771E8AE0074C07C /* RcordeViewController.swift */,
+				28BDAE57277AF28D00133929 /* ForgteViewController.swift */,
 				2882BC5F2766307B00147E9E /* ViewController.swift */,
 				28BBE23F2771B52D0074C07C /* Settings */,
 			);
@@ -290,6 +293,7 @@
 				28BDAE492779A74000133929 /* CollectionViewCell.swift in Sources */,
 				28BBE2412771C14E0074C07C /* loogViewController.swift in Sources */,
 				28B64770276A040300AE9508 /* MainViewController.swift in Sources */,
+				28BDAE58277AF28D00133929 /* ForgteViewController.swift in Sources */,
 				28C43AEB276734C4003F1694 /* HomeViewController.swift in Sources */,
 				28C43B1D2768BDB4003F1694 /* Constants.swift in Sources */,
 			);

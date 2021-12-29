@@ -30,7 +30,7 @@ class RcordeViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath)
-        
+        //ترتيب البحث
         if filterdata.count != 0
         {
             cell.textLabel!.text = filterdata[indexPath.row]
@@ -42,7 +42,7 @@ class RcordeViewController: UIViewController,UITableViewDelegate,UITableViewData
         return cell
     }
     
-    
+    //محرك البحث ودخال البينات
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         filterdata  = searchText.isEmpty ? array : array.filter {(item : String) -> Bool in
@@ -53,7 +53,7 @@ class RcordeViewController: UIViewController,UITableViewDelegate,UITableViewData
         tblview.reloadData()
     }
     
-    
+    //ارسال المعلومت
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         selectedData = filterdata[indexPath.row]

@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var loginButton: UIButton!
+    //زر نسيان كلمت السر
+    @IBOutlet weak var passwordRecovery: UIButton!
     
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -39,7 +41,8 @@ class LoginViewController: UIViewController {
         Utilities.styleTextField(emailTextField)
         Utilities.styleTextField(passwordTextField)
         Utilities.styleFilledButton(loginButton)
-        
+        Utilities.styleAcshnButton(passwordRecovery
+        )
     }
     
     /*
@@ -61,8 +64,7 @@ class LoginViewController: UIViewController {
         
     
     
-    
-    
+    //حفظ بينات تسجيل الدخول
 func login(email:String, password:String) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             
@@ -72,7 +74,7 @@ func login(email:String, password:String) {
                 self.errorLabel.alpha = 1
             }
             else {
-                
+                 
                 UserDefaults.standard.setValue(email, forKey: "email")
                 UserDefaults.standard.setValue(password, forKey: "password")
                 UserDefaults.standard.synchronize()
@@ -86,5 +88,5 @@ func login(email:String, password:String) {
     }
     
     
-    }
 
+}
