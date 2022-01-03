@@ -7,17 +7,32 @@
 
 import UIKit
 import Foundation
+struct CurrencyRate {
+    let name:String
+    let rate:String
+}
+
 class MainViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
-    var arrayLabel = ["HR0.05-","USD1.07-","SA0.67+","TRU1+"]
-    
+    var arrayLabel = [CurrencyRate]()
+   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayLabel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as! CollectionViewCell
-        cell.label.text = arrayLabel[indexPath.row]
+        var plus = ""
+        cell.name.text = arrayLabel[indexPath.row].name
+        if Double(arrayLabel[indexPath.row].rate)! > 0 {
+            cell.rate.textColor = .systemGreen
+            plus = "+"
+        } else if Double(arrayLabel[indexPath.row].rate)! < 0 {
+            cell.rate.textColor = .systemRed
+        } else {
+            cell.rate.textColor = .systemGray
+        }
+        cell.rate.text = plus + arrayLabel[indexPath.row].rate
         return cell
             }
     
@@ -59,6 +74,14 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
       return nf
     }()
     
+    let numberFormatter2: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.numberStyle = .decimal
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 6
+        return nf
+      }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        Utilities.styleAcshnButton(fromButton)
@@ -67,7 +90,26 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
 //        Utilities.stylewidthButton(calculate)
 //        Utilities.stylewidthButton(record)
         // Do any additional setup after loading the view.
-    }
+
+        let dateformat = DateFormatter()
+            dateformat.dateFormat = "yyyy-MM-dd"
+        let today =  dateformat.string(from: Date())
+        let yesterdayDate = Calendar.current.date(byAdding: .day, value: -7, to: Date())!
+        let yesterday =  dateformat.string(from: yesterdayDate)
+
+        rateAPI(from: "USD", to: "SAR", today: today,yestarday: yesterday)
+        rateAPI(from: "USD", to: "TRY", today: today,yestarday: yesterday)
+        rateAPI(from: "USD", to: "EGP", today: today,yestarday: yesterday)
+        rateAPI(from: "USD", to: "EUR", today: today,yestarday: yesterday)
+        rateAPI(from: "USD", to: "CNY", today: today,yestarday: yesterday)
+        rateAPI(from: "USD", to: "LBP", today: today,yestarday: yesterday)
+        rateAPI(from: "USD", to: "CAD", today: today,yestarday: yesterday)
+        rateAPI(from: "USD", to: "JOD", today: today,yestarday: yesterday)
+        rateAPI(from: "USD", to: "KWD", today: today,yestarday: yesterday)
+        rateAPI(from: "USD", to: "BHD", today: today,yestarday: yesterday)
+        rateAPI(from: "USD", to: "EUR", today: today,yestarday: yesterday)
+        rateAPI(from: "USD", to: "CHF", today: today,yestarday: yesterday)
+   }
     
     
    
@@ -104,7 +146,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
             API(amount: styleTextField.text!, from: from, to: to)
         }
     }
-    
+    //فنكش تبديل العملات
     @IBAction func switche(_ sender: UIButton) {
         if fromButton.titleLabel?.text != "" && toButton.titleLabel?.text != "" {
             DispatchQueue.main.async {
@@ -178,7 +220,44 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         }
         task.resume()
     }
+    
+    
+    func rateAPI(from: String, to: String,today:String,yestarday:String) {
+        let url = URL(string: "https://free.currconv.com/api/v7/convert?q=\(from)_\(to)&compact=ultra&date=\(yestarday)&endDate=\(today)&apiKey=7f5a14d64a54862e52bd")
+        let task = URLSession.shared.dataTask(with: ((url ?? URL(string: "https://api.frankfurter.app/latest?amount=10&from=GBP&to=USD"))!)) { [self] (data, response, error) in
+            
+            do {
+                let jsonResponse = try JSONSerialization.jsonObject(with: data!, options: [])
+                guard let newValue = jsonResponse as? [String:Any] else {
+                    print("invalid format")
+                    return
+                }
+                
+                let result = newValue["\(from)_\(to)"] as! [String : Any]
+                
+                DispatchQueue.main.async {
+                    let todayRate = result[today]! as! Double
+                    let yestardayRate = result[yestarday]! as! Double
+                    let sum = todayRate - yestardayRate
+                    let sumFormate = numberFormatter2.string(from: NSNumber(value: sum))
+                    arrayLabel.append(CurrencyRate(name: "\(from)/\(to)", rate: String(describing: sumFormate!)))
+                    collection.reloadData()
+                }
+               
+                
+            }
+            catch let error {
+                print("Error: \(error)")
+            }
+            
+        }
+        
+        task.resume()
+   
+    }
 }
+
+
 
 
 extension StringProtocol {

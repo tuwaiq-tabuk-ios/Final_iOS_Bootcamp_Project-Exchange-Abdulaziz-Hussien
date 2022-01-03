@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283A5689277D8BC30059FAD0 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A5688277D8BC30059FAD0 /* RecordTableViewCell.swift */; };
+		283A5691277D9A4C0059FAD0 /* NayeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A5690277D9A4C0059FAD0 /* NayeViewController.swift */; };
 		2882BC5C2766307B00147E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882BC5B2766307B00147E9E /* AppDelegate.swift */; };
 		2882BC5E2766307B00147E9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882BC5D2766307B00147E9E /* SceneDelegate.swift */; };
 		2882BC602766307B00147E9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882BC5F2766307B00147E9E /* ViewController.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		283A5688277D8BC30059FAD0 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		283A5690277D9A4C0059FAD0 /* NayeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NayeViewController.swift; sourceTree = "<group>"; };
 		2882BC582766307B00147E9E /* CurrencyConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2882BC5B2766307B00147E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2882BC5D2766307B00147E9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 			children = (
 				28BBE23D2771B5090074C07C /* settingsViewController.swift */,
 				28BBE2402771C14E0074C07C /* loogViewController.swift */,
+				283A5688277D8BC30059FAD0 /* RecordTableViewCell.swift */,
+				283A5690277D9A4C0059FAD0 /* NayeViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -290,12 +296,14 @@
 				28BBE23E2771B5090074C07C /* settingsViewController.swift in Sources */,
 				2882BC5E2766307B00147E9E /* SceneDelegate.swift in Sources */,
 				28BBE2432771E8AE0074C07C /* RcordeViewController.swift in Sources */,
+				283A5689277D8BC30059FAD0 /* RecordTableViewCell.swift in Sources */,
 				28BDAE492779A74000133929 /* CollectionViewCell.swift in Sources */,
 				28BBE2412771C14E0074C07C /* loogViewController.swift in Sources */,
 				28B64770276A040300AE9508 /* MainViewController.swift in Sources */,
 				28BDAE58277AF28D00133929 /* ForgteViewController.swift in Sources */,
 				28C43AEB276734C4003F1694 /* HomeViewController.swift in Sources */,
 				28C43B1D2768BDB4003F1694 /* Constants.swift in Sources */,
+				283A5691277D9A4C0059FAD0 /* NayeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

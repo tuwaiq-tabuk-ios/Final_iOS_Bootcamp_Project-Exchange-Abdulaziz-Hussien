@@ -8,13 +8,14 @@
 import UIKit
 
 class loogViewController: UITableViewController {
-
+   
     @IBAction func addBoetn(_ sender: UIButton) {
     }
     @IBAction func editBoten(_ sender: UIButton) {
     }
     
     
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +23,16 @@ class loogViewController: UITableViewController {
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
       // #warning Incomplete implementation, return the number of sections
-      return 0
+      return 1
     }
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       // #warning Incomplete implementation, return the number of rows
-      return 1
+      return 20
+        
     }
+    
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,12 +40,12 @@ class loogViewController: UITableViewController {
       
       // Get a new or recycled cell
           let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell",
-              for: indexPath)
-      
-      
-      
-      
-      
+              for: indexPath) as! RecordTableViewCell
+        cell.currency.text = "AS"
+        cell.currency1.text = "USD"
+        cell.todaysDate.text = "2021/1/1"
+        cell.Currencies.text = "سعر العمله "
+        cell.TransferAmount.text = "$$"
       return cell
     }
 
@@ -55,5 +58,4 @@ class loogViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

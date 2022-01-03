@@ -10,9 +10,10 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var name: UILabel!
     
-   
+    @IBOutlet weak var rate: UILabel!
+    
    
 }
  
