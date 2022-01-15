@@ -16,7 +16,7 @@ class Utilities {
         // Create the bottom line
         let bottomLine = CALayer()
         
-        bottomLine.frame = CGRect(x: 10, y: textfield.frame.height - 4, width: textfield.frame.width - 5, height: 2)
+        bottomLine.frame = CGRect(x: 10, y: textfield.frame.height - 3, width: textfield.frame.width - 20 , height: 2)
         
         bottomLine.backgroundColor = UIColor.init(red: 171/255, green: 167/255, blue: 233/255, alpha: 1).cgColor
         
@@ -67,7 +67,7 @@ class Utilities {
     
     static func isPasswordValid(_ password : String) -> Bool {
         
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&_])[A-Za-z\\d$@$#!%*?&_]{8,}")
         return passwordTest.evaluate(with: password)
     }
     

@@ -10,130 +10,130 @@ import FirebaseAuth
 import Firebase
 
 class singUpViewController: UIViewController {
+  
+  // MARK: - IBOutlets
+  
+  @IBOutlet weak var firstNameTextField: UITextField!
+  @IBOutlet weak var lastNameTextField: UITextField!
+  @IBOutlet weak var emailTextField: UITextField!
+  @IBOutlet weak var passwordTextField: UITextField!
+  @IBOutlet weak var singUpButton: UIButton!
+  @IBOutlet weak var errorLabel: UILabel!
+  
+  
+  
+  // MARK: - View controller lifecycle
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
+    // Do any additional setup after loading the view.
+    setUpElements()
+  }
+  
+  
+  
+  // MARK: - IBActions
+  
+  @IBAction func singUpTapped(_ sender: Any) {
+    let error = validateFields()
     
-    
-    
-    @IBOutlet weak var firstNameTextField: UITextField!
-    @IBOutlet weak var lastNameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var singUpButton: UIButton!
-    @IBOutlet weak var errorLabel: UILabel!
-    
-    
-    
-
-    
-    
-    override func viewDidLoad() {
-       super.viewDidLoad()
-       
-        // Do any additional setup after loading the view.
-        setUpElements()
+    if error != nil {
+      
+      // There's something wrong with the fields, show error message
+      showError(error!)
     }
-    
-    func setUpElements() {
-    
-        // Hide the error label
-        errorLabel.alpha = 0
-    
-        // Style the elements
-        Utilities.styleTextField(firstNameTextField)
-        Utilities.styleTextField(lastNameTextField)
-        Utilities.styleTextField(emailTextField)
-        Utilities.styleTextField(passwordTextField)
-        Utilities.styleFilledButton(singUpButton)
-    }
-    
-    
-    func validateFields() -> String? {
+    else {
+      
+      // Create cleaned versions of the data
+      let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+      let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+      let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+      let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+      
+      // Create the user
+      Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
         
-        // Check that all fields are filled in
-        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            
-            return "Please fill in all fields."
-        }
-        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        if Utilities.isPasswordValid(cleanedPassword) == false {
-            // Password isn't secure enough
-            return "Please make sure your password is at least 8 characters, contains a special character and a number."
-        }
-        
-        return nil
-    }
-    
-
-    @IBAction func singUpTapped(_ sender: Any) {
-        let error = validateFields()
-        
-        if error != nil {
-            
-            // There's something wrong with the fields, show error message
-            showError(error!)
+        // Check for errors
+        if err != nil {
+          
+          // There was an error creating the user
+          self.showError("Error creating user")
         }
         else {
+          
+          //تخزين الاسم الاول وثني   // User was created successfully, now store the first name and last name
+          let db = Firestore.firestore()
+          
+          db.collection("users").document(result!.user.uid).setData(["firstname":firstName, "lastname":lastName, "uid": result!.user.uid ]) { (error) in
             
-            // Create cleaned versions of the data
-            let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            // Create the user
-            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
-                
-                // Check for errors
-                if err != nil {
-                    
-                    // There was an error creating the user
-                    self.showError("Error creating user")
-                }
-                else {
-                    
-                 //تخزين الاسم الاول وثني   // User was created successfully, now store the first name and last name
-                    let db = Firestore.firestore()
-                    
-                    db.collection("users").document(result!.user.uid).setData(["firstname":firstName, "lastname":lastName, "uid": result!.user.uid ]) { (error) in
-                        
-                        if error != nil {
-                            // Show error message
-                            self.showError("Error saving user data")
-                        }
-                    }
-                    
-                    // Transition to the home screen
-                    self.transitionToHome()
-                }
-                
+            if error != nil {
+              // Show error message
+              self.showError("Error saving user data")
             }
-            
-            
-            
+          }
+          
+          // Transition to the home screen
+          self.transitionToHome()
         }
+      }
+    }
+  }
+  
+  
+  func setUpElements() {
+    // Hide the error label
+    errorLabel.alpha = 0
+    
+    // Style the elements
+    Utilities.styleTextField(firstNameTextField)
+    Utilities.styleTextField(lastNameTextField)
+    Utilities.styleTextField(emailTextField)
+    Utilities.styleTextField(passwordTextField)
+    Utilities.styleFilledButton(singUpButton)
+  }
+  
+  
+  func validateFields() -> String? {
+    // Check that all fields are filled in
+    if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+      
+      return "Please fill in all fields."
+    }
+    let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+    
+    if Utilities.isPasswordValid(cleanedPassword) == false {
+      // Password isn't secure enough
+      return "Please make sure your password is at least 8 characters, contains a special character and a number."
     }
     
-    func showError(_ message:String) {
-        
-        errorLabel.text = message
-        errorLabel.alpha = 1
-    }
+    return nil
+  }
+  
+  
+  func showError(_ message:String) {
     
-    func transitionToHome() {
-        
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.MainViewController) as? MainViewController
-        
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
-        
-    }
+    errorLabel.text = message
+    errorLabel.alpha = 1
+  }
+  
+  func transitionToHome() {
     
+    let homeViewController
+      = storyboard?
+      .instantiateViewController(
+        identifier: Constants.Storyboard.MainViewController
+      ) as? MainViewController
+    
+    view.window?.rootViewController = homeViewController
+    view.window?.makeKeyAndVisible()
+  }
+  
 }
 
-    
+
 
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		283A5689277D8BC30059FAD0 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A5688277D8BC30059FAD0 /* RecordTableViewCell.swift */; };
 		283A5691277D9A4C0059FAD0 /* NayeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283A5690277D9A4C0059FAD0 /* NayeViewController.swift */; };
+		2874EFB127903950009A765B /* CurrencyRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2874EFB027903950009A765B /* CurrencyRate.swift */; };
 		2882BC5C2766307B00147E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882BC5B2766307B00147E9E /* AppDelegate.swift */; };
 		2882BC5E2766307B00147E9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882BC5D2766307B00147E9E /* SceneDelegate.swift */; };
 		2882BC602766307B00147E9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2882BC5F2766307B00147E9E /* ViewController.swift */; };
@@ -17,8 +18,8 @@
 		2882BC682766307D00147E9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2882BC662766307D00147E9E /* LaunchScreen.storyboard */; };
 		28B64770276A040300AE9508 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B6476F276A040300AE9508 /* MainViewController.swift */; };
 		28BBE23E2771B5090074C07C /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE23D2771B5090074C07C /* settingsViewController.swift */; };
-		28BBE2412771C14E0074C07C /* loogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE2402771C14E0074C07C /* loogViewController.swift */; };
-		28BBE2432771E8AE0074C07C /* RcordeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE2422771E8AE0074C07C /* RcordeViewController.swift */; };
+		28BBE2412771C14E0074C07C /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE2402771C14E0074C07C /* RecordViewController.swift */; };
+		28BBE2432771E8AE0074C07C /* RecordeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE2422771E8AE0074C07C /* RecordeViewController.swift */; };
 		28BDAE492779A74000133929 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDAE482779A74000133929 /* CollectionViewCell.swift */; };
 		28BDAE58277AF28D00133929 /* ForgteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BDAE57277AF28D00133929 /* ForgteViewController.swift */; };
 		28C43AE727673485003F1694 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C43AE627673485003F1694 /* LoginViewController.swift */; };
@@ -26,12 +27,14 @@
 		28C43AF5276771C4003F1694 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C43AF4276771C4003F1694 /* Utilities.swift */; };
 		28C43AF82767989E003F1694 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28C43AF72767989E003F1694 /* GoogleService-Info.plist */; };
 		28C43B1D2768BDB4003F1694 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C43B1C2768BDB4003F1694 /* Constants.swift */; };
+		28FD142E2790482600E048B9 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FD142D2790482600E048B9 /* Recorder.swift */; };
 		4673A15A1E6AF49D34531BD1 /* Pods_Exchange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B58B3BAC29153F0F073ED5 /* Pods_Exchange.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		283A5688277D8BC30059FAD0 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		283A5690277D9A4C0059FAD0 /* NayeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NayeViewController.swift; sourceTree = "<group>"; };
+		2874EFB027903950009A765B /* CurrencyRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRate.swift; sourceTree = "<group>"; };
 		2882BC582766307B00147E9E /* Exchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2882BC5B2766307B00147E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2882BC5D2766307B00147E9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,8 +45,8 @@
 		2882BC692766307D00147E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28B6476F276A040300AE9508 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		28BBE23D2771B5090074C07C /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
-		28BBE2402771C14E0074C07C /* loogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loogViewController.swift; sourceTree = "<group>"; };
-		28BBE2422771E8AE0074C07C /* RcordeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RcordeViewController.swift; sourceTree = "<group>"; };
+		28BBE2402771C14E0074C07C /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		28BBE2422771E8AE0074C07C /* RecordeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordeViewController.swift; sourceTree = "<group>"; };
 		28BDAE482779A74000133929 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		28BDAE57277AF28D00133929 /* ForgteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgteViewController.swift; sourceTree = "<group>"; };
 		28C43AE627673485003F1694 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		28C43AF4276771C4003F1694 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		28C43AF72767989E003F1694 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		28C43B1C2768BDB4003F1694 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		28FD142D2790482600E048B9 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		5A3FBEA4EC2B0644BC718450 /* Pods-Exchange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exchange.release.xcconfig"; path = "Target Support Files/Pods-Exchange/Pods-Exchange.release.xcconfig"; sourceTree = "<group>"; };
 		71B58B3BAC29153F0F073ED5 /* Pods_Exchange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Exchange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		887FC7BE3C6EB10171B60953 /* Pods-CurrencyConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyConverter.release.xcconfig"; path = "Target Support Files/Pods-CurrencyConverter/Pods-CurrencyConverter.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2874EFAF27903926009A765B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2874EFB027903950009A765B /* CurrencyRate.swift */,
+				28FD142D2790482600E048B9 /* Recorder.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2882BC4F2766307B00147E9E = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +104,7 @@
 		2882BC5A2766307B00147E9E /* Exchange */ = {
 			isa = PBXGroup;
 			children = (
+				2874EFAF27903926009A765B /* Models */,
 				28BDAE4C2779A76600133929 /* cell */,
 				28B6476E276A035200AE9508 /* picker */,
 				2882BC5B2766307B00147E9E /* AppDelegate.swift */,
@@ -111,7 +125,7 @@
 			children = (
 				28C43AE8276734AF003F1694 /* singUpViewController.swift */,
 				28C43AE627673485003F1694 /* LoginViewController.swift */,
-				28BBE2422771E8AE0074C07C /* RcordeViewController.swift */,
+				28BBE2422771E8AE0074C07C /* RecordeViewController.swift */,
 				28BDAE57277AF28D00133929 /* ForgteViewController.swift */,
 				2882BC5F2766307B00147E9E /* ViewController.swift */,
 				28BBE23F2771B52D0074C07C /* Settings */,
@@ -131,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				28BBE23D2771B5090074C07C /* settingsViewController.swift */,
-				28BBE2402771C14E0074C07C /* loogViewController.swift */,
+				28BBE2402771C14E0074C07C /* RecordViewController.swift */,
 				283A5688277D8BC30059FAD0 /* RecordTableViewCell.swift */,
 				283A5690277D9A4C0059FAD0 /* NayeViewController.swift */,
 			);
@@ -293,13 +307,15 @@
 				28C43AE727673485003F1694 /* LoginViewController.swift in Sources */,
 				28C43AF5276771C4003F1694 /* Utilities.swift in Sources */,
 				2882BC602766307B00147E9E /* ViewController.swift in Sources */,
+				2874EFB127903950009A765B /* CurrencyRate.swift in Sources */,
 				2882BC5C2766307B00147E9E /* AppDelegate.swift in Sources */,
 				28BBE23E2771B5090074C07C /* settingsViewController.swift in Sources */,
 				2882BC5E2766307B00147E9E /* SceneDelegate.swift in Sources */,
-				28BBE2432771E8AE0074C07C /* RcordeViewController.swift in Sources */,
+				28BBE2432771E8AE0074C07C /* RecordeViewController.swift in Sources */,
 				283A5689277D8BC30059FAD0 /* RecordTableViewCell.swift in Sources */,
 				28BDAE492779A74000133929 /* CollectionViewCell.swift in Sources */,
-				28BBE2412771C14E0074C07C /* loogViewController.swift in Sources */,
+				28FD142E2790482600E048B9 /* Recorder.swift in Sources */,
+				28BBE2412771C14E0074C07C /* RecordViewController.swift in Sources */,
 				28B64770276A040300AE9508 /* MainViewController.swift in Sources */,
 				28BDAE58277AF28D00133929 /* ForgteViewController.swift in Sources */,
 				28C43B1D2768BDB4003F1694 /* Constants.swift in Sources */,
