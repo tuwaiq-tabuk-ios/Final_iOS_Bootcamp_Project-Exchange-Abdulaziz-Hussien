@@ -43,18 +43,15 @@ class MainViewController: UIViewController,
                 "Djiboutian Franc(DJF)",  "Dominican Peso(DOP)",  "East Caribbean Dollar(XCD)",  "Egyptian Pound(EGP)",
                 "Eritrean Nakfa(ERN)",  "Ethiopian Birr(ETB)",  "Euro(EUR)",  "Falkland Islands Pound(FKP)",  "Fijian Dfollar(FJD)",  "Gambian Dalasi(GMD)",  "Georgian Lari(GEL)",  "Ghanaian Cedi(GHS)",  "Gibraltar Pound(GIP)",  "Guatemalan Quetzal(GTQ)",  "Guernsey Pound(GGP)",  "Guinean Franc(GNF)",  "Guyanese Dollar(GYD)",  "Haitian Gourde(HTG)",  "Honduran Lempira(HNL)",  "Hong Kong Dollar(HKD)",  "Hungarian Forint(HUF)",  "Icelandic Króna(ISK)",  "Indian Rupee(INR)",  "Indonesian Rupiah(R)",  "Iranian Rial(IRR)",  "Iraqi Dinar(IQD)",  "Israeli New Sheqel(ILS)",  "Jamaican Dollar(JMD)",  "Japanese Yen(JPY)",  "Jersey Pound(JEP)",  "Jordanian Dinar(JOD)",  "Kazakhstani Tenge(KZT)",  "Kenyan Shilling(KES)",  "Kuwaiti Dinar(KWD)",  "Kyrgyzstani Som(KGS)",  "Lao Kip(LAK)",  "Latvian Lats(LVL)",  "Lebanese Lira(LBP)",  "Lesotho Loti(LSL)",  "Liberian Dollar(LRD)",  "Libyan Dinar(LYD)",  "Macanese Pataca(MOP)",  "Macedonian Denar(MKD)",  "Malagasy Ariary(MGA)",  "Malawian Kwacha(MWK)",  "Malaysian Ringgit(MYR)",  "Maldivian Rufiyaa(MVR)",  "Manx pound(IMP)",  "Mauritanian Ouguiya(MRO)",  "Mauritian Rupee(MUR)",  "Mexican Peso(MXN)",  "Moldovan Leu(MDL)",  "Mongolian Tugrik(MNT)",  "Moroccan Dirham(MAD)",  "Mozambican Metical(MZN)",  "Myanma Kyat(MMK)",  "Namibian Dollar(NAD)",  "Nepalese Rupee(NPR)",  "Netherlands Antillean Gulden(ANG)",  "New Belarusian Ruble(BYN)",  "New Taiwan Dollar(TWD)",  "New Zealand Dollar(NZD)",  "Nicaraguan Cordoba(NIO)",  "Nigerian Naira(NGN)",  "North Korean Won(KPW)",  "Norwegian Krone(NOK)",  "Old Zambian Kwacha(ZMK)",  "Omani Rial(OMR)",  "Paanga(TOP)",  "Pakistani Rupee(PKR)",  "Panamanian Balboa(PAB)",  "Papua New Guinean Kina(PGK)",  "Paraguayan Guarani(PYG)",  "Peruvian Nuevo Sol(PEN)",  "Philippine Peso(PHP)",  "Polish Zloty(PLN)",  "Qatari Riyal(QAR)",  "Romanian Leu(RON)",  "Russian Ruble(RUB)",  "Rwandan Franc(RWF)",  "Saint Helena Pound(SHP)",  "Salvadoran Colón(SVC)",  "Samoan Tala(WST)",  "Sao Tome And Principe Dobra(STD)",  "Saudi Riyal(SAR)",  "Serbian Dinar(RSD)",  "Seychellois Rupee(SCR)",  "Sierra Leonean Leone(SLL)",  "Silver (troy ounce) (XAG)",  "Singapore Dollar(SGD)",  "Solomon Islands Dollar(SBD)",  "Somali Shilling(SOS)",  "South African Rand(ZAR)",  "South Korean Won(KRW)",  "Special Drawing Rights(XDR)",  "Sri Lankan Rupee(LKR)",  "Sudanese Pound(SDG)",  "Surinamese Dollar(SRD)",  "Swazi Lilangeni(SZL)",  "Swedish Krona(SEK)",  "Swiss Franc(CHF)",  "Syrian Pound(SYP)",  "Tajikistani Somoni(TJS)",  "Tanzanian Shilling(TZS)",  "Thai Baht(THB)",  "Trinad and Tobago Dollar(TTD)",  "Tunisian Dinar(TND)",  "Turkish New Lira(TRY)",  "Turkmenistan Manat(TMT)",  "UAE Dirham(AED)",  "Ugandan Shilling(UGX)",  "Ukrainian Hryvnia(UAH)",  "United States Dollar(USD)",  "Uruguayan Peso(UYU)",  "Uzbekistani Som(UZS)",  "Vanuatu Vatu(VUV)",  "Venezuelan Bolivar(VEF)",  "Vietnamese Dong(VND)",  "West African CFA Franc(XOF)",  "Yemeni Rial(YER)",  "Zambian Kwacha(ZMW)",  "Zimbabwean Dollar(ZWL)"]
   
+  
+  
+  // MARK: - IBOutlets
   @IBOutlet weak var collection: UICollectionView!
-  
   @IBOutlet weak var styleTextField: UITextField!
-  
   @IBOutlet weak var viewLabel: UILabel!
-  
   @IBOutlet weak var fromButton: UIButton!
-  
   @IBOutlet weak var toButton: UIButton!
-  
   @IBOutlet weak var calculate: UIButton!
-  
   @IBOutlet weak var record: UIButton!
   
   

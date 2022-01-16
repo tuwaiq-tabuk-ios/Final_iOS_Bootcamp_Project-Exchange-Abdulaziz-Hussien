@@ -93,22 +93,28 @@ class singUpViewController: UIViewController {
     Utilities.styleTextField(password2)
   }
   
-  
+  // MARK: - func
   func validateFields() -> String? {
     // Check that all fields are filled in
-    if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+    if (firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
         lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
         emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-        passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-      password2.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "passwordTextField"
+        passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        password2.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "") &&
+        passwordTextField.text == password2.text{
+      
       return "Please fill in all fields."
     }
     let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-    
+     
     if Utilities.isPasswordValid(cleanedPassword) == false {
       // Password isn't secure enough
+     
       return "Please make sure your password is at least 8 characters, contains a special character and a number."
     }
+//    if  (password2 == passwordTextField) == true{
+    
+   // }
     
     return nil
   }
