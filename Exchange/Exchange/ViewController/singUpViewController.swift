@@ -19,8 +19,7 @@ class singUpViewController: UIViewController {
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var singUpButton: UIButton!
   @IBOutlet weak var errorLabel: UILabel!
-  
-  
+  @IBOutlet weak var password2: UITextField!
   
   // MARK: - View controller lifecycle
   
@@ -91,6 +90,7 @@ class singUpViewController: UIViewController {
     Utilities.styleTextField(emailTextField)
     Utilities.styleTextField(passwordTextField)
     Utilities.styleFilledButton(singUpButton)
+    Utilities.styleTextField(password2)
   }
   
   
@@ -100,7 +100,7 @@ class singUpViewController: UIViewController {
         lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
         emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
         passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-      
+      password2.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "passwordTextField"
       return "Please fill in all fields."
     }
     let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
