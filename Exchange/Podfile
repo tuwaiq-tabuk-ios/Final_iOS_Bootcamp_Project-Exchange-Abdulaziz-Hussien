@@ -1,11 +1,11 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'CurrencyConverter' do
+target 'Exchange' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for CurrencyConverter
+  # Pods for Exchange
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 end
