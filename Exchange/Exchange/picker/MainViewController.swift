@@ -92,7 +92,7 @@ class MainViewController: UIViewController,
     let today =  dateformat.string(from: Date())
     let yesterdayDate = Calendar.current.date(byAdding: .day, value: -7, to: Date())!
     let yesterday =  dateformat.string(from: yesterdayDate)
-    
+
     rateAPI(from: "USD", to: "SAR", today: today,yestarday: yesterday)
     rateAPI(from: "USD", to: "TRY", today: today,yestarday: yesterday)
     rateAPI(from: "USD", to: "EGP", today: today,yestarday: yesterday)
@@ -110,9 +110,9 @@ class MainViewController: UIViewController,
     rateAPI(from: "SAR", to: "CHF", today: today,yestarday: yesterday)
     rateAPI(from: "SAR", to: "KWD", today: today,yestarday: yesterday)
   }
-  
-  
-  
+
+
+
   
   
   override func viewWillAppear(_ animated: Bool) {
