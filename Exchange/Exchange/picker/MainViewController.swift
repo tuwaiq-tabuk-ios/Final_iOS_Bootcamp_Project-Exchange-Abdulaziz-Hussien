@@ -131,7 +131,7 @@ class MainViewController: UIViewController,
       fromButton.setTitle(from, for: .normal)
     }
   }
-  
+  // MARK: - IBAction
   @IBAction func calculateButtonTapped(_ sender: UIButton) {
     if (from == nil) || (to == nil) {
       let alert = UIAlertController(title: "Oops!", message: "You forgot to fill in a field! Please try again", preferredStyle: .alert)
@@ -176,7 +176,7 @@ class MainViewController: UIViewController,
     }
   }
   
-  
+  // MARK: - API
   func API(amount: String, from: String, to: String) {
     print("From \(from), To \(to)")
     let url = URL(string: "https://free.currconv.com/api/v7/convert?q=\(from)_\(to)&compact=ultra&apiKey=7f5a14d64a54862e52bd")
@@ -262,6 +262,7 @@ class MainViewController: UIViewController,
 
 // MARK: - Collection data source
 
+// MARK: - extension
 extension MainViewController:  UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView,

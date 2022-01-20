@@ -629,7 +629,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1388" translatesAutoresizingMaskIntoConstraints="NO" id="3Qc-d7-9Gk">
-                                            <rect key="frame" x="30" y="98" width="357" height="364"/>
+                                            <rect key="frame" x="30" y="98" width="354" height="364"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7S-Mt-K0f">
                                             <rect key="frame" x="0.0" y="484" width="414" height="391"/>
@@ -759,7 +759,7 @@
                                         <constraint firstAttribute="trailing" secondItem="r7S-Mt-K0f" secondAttribute="trailing" id="Aag-cQ-sQB"/>
                                         <constraint firstItem="3Qc-d7-9Gk" firstAttribute="top" secondItem="uZy-P0-hlQ" secondAttribute="top" constant="98" id="HgG-wL-3Do"/>
                                         <constraint firstItem="r7S-Mt-K0f" firstAttribute="top" secondItem="3Qc-d7-9Gk" secondAttribute="bottom" constant="22" id="T1n-BS-pdg"/>
-                                        <constraint firstAttribute="trailing" secondItem="3Qc-d7-9Gk" secondAttribute="trailing" constant="27" id="c3S-kR-7lq"/>
+                                        <constraint firstAttribute="trailing" secondItem="3Qc-d7-9Gk" secondAttribute="trailing" constant="30" id="c3S-kR-7lq"/>
                                         <constraint firstItem="r7S-Mt-K0f" firstAttribute="leading" secondItem="uZy-P0-hlQ" secondAttribute="leading" id="lnd-AE-JRK"/>
                                         <constraint firstAttribute="bottom" secondItem="r7S-Mt-K0f" secondAttribute="bottom" constant="-13" id="nAD-l2-SUP"/>
                                         <constraint firstItem="3Qc-d7-9Gk" firstAttribute="leading" secondItem="uZy-P0-hlQ" secondAttribute="leading" constant="30" id="vRW-0h-wEy"/>
@@ -1197,7 +1197,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2NN-SQ-Vge"/>
+        <segue reference="3OC-OE-v6q"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.66911280029017917" green="0.65418536026261143" blue="0.91493055555555558" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
