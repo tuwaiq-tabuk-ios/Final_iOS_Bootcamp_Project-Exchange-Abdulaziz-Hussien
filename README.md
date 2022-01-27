@@ -22,3 +22,8 @@ Anyone in general, but escpecially the traveleres.
 ● The user will be able to select the two currencies in each exchange from a list that appears. 
 
 ● The user will see the resutl of the exchange easily. 
+
+
+
+https://user-images.githubusercontent.com/91871806/151357336-6c26df7d-30f4-4557-9b9f-a5ab114c352c.mov
+
