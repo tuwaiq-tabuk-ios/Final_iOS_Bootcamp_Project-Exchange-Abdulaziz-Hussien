@@ -23,6 +23,6 @@ Anyone in general, but escpecially the traveleres.
 
 ● The user will see the resutl of the exchange easily. 
 
-<img width="190" alt="Screen Shot 2022-01-05 at 4 52 43 PM" src="https://user-images.githubusercontent.com/91871806/151342159-7dd46a3b-6bd4-4e0f-803b-86aeb6252b2a.png">
+
 
 <img width="376" alt="‏لقطة الشاشة ٢٠٢٢-٠١-٢٣ في ٦ ٤٠ ٢٣ م" src="https://user-images.githubusercontent.com/91871806/151342295-d5fd1869-c405-4444-b95d-594dec0efd59.png">
